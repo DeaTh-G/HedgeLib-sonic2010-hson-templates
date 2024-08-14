@@ -949,28 +949,7 @@
         "TYPE_THREE": { "value": 2, "descriptions": { "ja": "3(稀)" } }
       }
     },
-    "EnemyGoldTontonSpawner::CreateType1": {
-      "type": "uint8",
-      "values": {
-        "TYPE_DAMAGE": { "value": 0, "descriptions": { "ja": "ダメージ弾" } },
-        "TYPE_SHELLED": { "value": 1, "descriptions": { "ja": "殻付き弾" } }
-      }
-    },
-    "EnemyGoldTontonSpawner::CreateType2": {
-      "type": "uint8",
-      "values": {
-        "TYPE_DAMAGE": { "value": 0, "descriptions": { "ja": "ダメージ弾" } },
-        "TYPE_SHELLED": { "value": 1, "descriptions": { "ja": "殻付き弾" } }
-      }
-    },
-    "EnemyGoldTontonSpawner::CreateType3": {
-      "type": "uint8",
-      "values": {
-        "TYPE_DAMAGE": { "value": 0, "descriptions": { "ja": "ダメージ弾" } },
-        "TYPE_SHELLED": { "value": 1, "descriptions": { "ja": "殻付き弾" } }
-      }
-    },
-    "EnemyGoldTontonSpawner::CreateType4": {
+    "EnemyGoldTontonSpawner::CreateType": {
       "type": "uint8",
       "values": {
         "TYPE_DAMAGE": { "value": 0, "descriptions": { "ja": "ダメージ弾" } },
@@ -1454,47 +1433,7 @@
         "TYPE_HALF": { "value": 1, "descriptions": { "ja": "半分" } }
       }
     },
-    "ObjRollingStoneGeneratorSpawner::CreateType1": {
-      "type": "uint8",
-      "values": {
-        "TYPE_HARD": { "value": 0, "descriptions": { "ja": "堅い" } },
-        "TYPE_CRISP": { "value": 1, "descriptions": { "ja": "壊れる" } },
-        "TYPE_CRISP_ITEM": { "value": 2, "descriptions": { "ja": "壊れる(Item入り)" } }
-      }
-    },
-    "ObjRollingStoneGeneratorSpawner::CreateType2": {
-      "type": "uint8",
-      "values": {
-        "TYPE_HARD": { "value": 0, "descriptions": { "ja": "堅い" } },
-        "TYPE_CRISP": { "value": 1, "descriptions": { "ja": "壊れる" } },
-        "TYPE_CRISP_ITEM": { "value": 2, "descriptions": { "ja": "壊れる(Item入り)" } }
-      }
-    },
-    "ObjRollingStoneGeneratorSpawner::CreateType3": {
-      "type": "uint8",
-      "values": {
-        "TYPE_HARD": { "value": 0, "descriptions": { "ja": "堅い" } },
-        "TYPE_CRISP": { "value": 1, "descriptions": { "ja": "壊れる" } },
-        "TYPE_CRISP_ITEM": { "value": 2, "descriptions": { "ja": "壊れる(Item入り)" } }
-      }
-    },
-    "ObjRollingStoneGeneratorSpawner::CreateType4": {
-      "type": "uint8",
-      "values": {
-        "TYPE_HARD": { "value": 0, "descriptions": { "ja": "堅い" } },
-        "TYPE_CRISP": { "value": 1, "descriptions": { "ja": "壊れる" } },
-        "TYPE_CRISP_ITEM": { "value": 2, "descriptions": { "ja": "壊れる(Item入り)" } }
-      }
-    },
-    "ObjRollingStoneGeneratorSpawner::CreateType5": {
-      "type": "uint8",
-      "values": {
-        "TYPE_HARD": { "value": 0, "descriptions": { "ja": "堅い" } },
-        "TYPE_CRISP": { "value": 1, "descriptions": { "ja": "壊れる" } },
-        "TYPE_CRISP_ITEM": { "value": 2, "descriptions": { "ja": "壊れる(Item入り)" } }
-      }
-    },
-    "ObjRollingStoneGeneratorSpawner::CreateType6": {
+    "ObjRollingStoneGeneratorSpawner::CreateType": {
       "type": "uint8",
       "values": {
         "TYPE_HARD": { "value": 0, "descriptions": { "ja": "堅い" } },
@@ -3287,9 +3226,7 @@
         { "name": "pitch", "type": "float32", "default": 35.000000, "min_range": -89.000000, "max_range": 89.000000, "step": 0.100000, "descriptions": { "ja": "カメラのピッチ角" } },
         { "name": "isAnotherCenter", "type": "bool", "default": false, "descriptions": { "ja": "中心別指定モード" } },
         { "name": "center", "type": "vector3", "alignment": 16, "descriptions": { "ja": "球中心座標" } },
-        { "name": "depthRotaitonX", "type": "float32", "default": 0.000000, "min_range": -180.000000, "max_range": 180.000000, "step": 0.100000, "descriptions": { "ja": "奥行き方向の回転（X）" } },
-        { "name": "depthRotaitonY", "type": "float32", "default": 0.000000, "min_range": -180.000000, "max_range": 180.000000, "step": 0.100000, "descriptions": { "ja": "奥行き方向の回転（Y）" } },
-        { "name": "depthRotaitonZ", "type": "float32", "default": 0.000000, "min_range": -180.000000, "max_range": 180.000000, "step": 0.100000, "descriptions": { "ja": "奥行き方向の回転（Z）" } },
+        { "name": "depthRotaiton", "type": "vector3", "default": [ 0.000000, 0.000000, 0.000000 ], "min_range": [ -180.000000, -180.000000, -180.000000 ], "max_range": [ 180.000000, 180.000000, 180.000000 ], "step": [ 0.100000, 0.100000, 0.100000 ], "descriptions": { "ja": "奥行き方向の回転" } },
         { "name": "isFreeAxis", "type": "bool", "default": false, "descriptions": { "ja": "自由回転モード" } },
         { "name": "targetAngleMax", "type": "float32", "default": 10.000000, "min_range": 0.000000, "max_range": 89.000000, "step": 0.100000, "descriptions": { "ja": "注視点最大角度偏差" } },
         { "name": "eyeAngleMax", "type": "float32", "default": 35.000000, "min_range": 0.000000, "max_range": 89.000000, "step": 0.100000, "descriptions": { "ja": "カメラ位置最大角度偏差" } }
@@ -3510,9 +3447,7 @@
     },
     "ObjEventLoopAreaSpawner": {
       "fields": [
-        { "name": "scaleX", "type": "float32", "default": 100.000000, "min_range": 0.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "コリジョンサイズ横" } },
-        { "name": "scaleY", "type": "float32", "default": 100.000000, "min_range": 0.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "コリジョンサイズ縦" } },
-        { "name": "scaleZ", "type": "float32", "default": 20.000000, "min_range": 0.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "コリジョンサイズ奥" } },
+        { "name": "scale", "type": "vector3", "default": [ 100.000000, 100.000000, 100.000000 ], "min_range": [ 0.000000, 0.000000, 0.000000 ], "max_range": [ 100000.000000, 100000.000000, 100000.000000 ], "step": [ 0.100000, 0.100000, 0.100000 ], "descriptions": { "ja": "コリジョンサイズ" } },
         { "name": "top", "type": "vector3", "alignment": 16, "descriptions": { "ja": "頂点位置" } },
         { "name": "pathID", "type": "uint8", "default": 0, "min_range": 220, "max_range": 24, "step": 206, "descriptions": { "ja": "パスID" } },
         { "name": "asteroidScaleX", "type": "float32", "default": 0.000000, "min_range": 0.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "アステロイド消滅コリジョン横" } },
@@ -4429,9 +4364,7 @@
         { "name": "MessageBoot", "type": "bool", "default": false, "descriptions": { "ja": "メッセージで出現か？" } },
         { "name": "AppearRange", "type": "float32", "default": 400.000000, "min_range": 0.010000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "出現範囲のサイズ" } },
         { "name": "SearchRange", "type": "float32", "default": 400.000000, "min_range": 0.010000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲のサイズ" } },
-        { "name": "RangeAddX", "type": "float32", "default": 0.000000, "min_range": -1000.000000, "max_range": 1000.000000, "step": 0.100000, "descriptions": { "ja": "範囲コリジョンの差分指定(X)" } },
-        { "name": "RangeAddY", "type": "float32", "default": 0.000000, "min_range": -1000.000000, "max_range": 1000.000000, "step": 0.100000, "descriptions": { "ja": "範囲コリジョンの差分指定(Y)" } },
-        { "name": "RangeAddZ", "type": "float32", "default": 0.000000, "min_range": -1000.000000, "max_range": 1000.000000, "step": 0.100000, "descriptions": { "ja": "範囲コリジョンの差分指定(Z)" } }
+        { "name": "RangeAdd", "type": "vector3", "default": [ 0.000000, 0.000000, 0.000000 ], "min_range": [ -1000.000000, -1000.000000, -1000.000000 ], "max_range": [ 1000.000000, 1000.000000, 1000.000000 ], "step": [ 0.100000, 0.100000, 0.100000 ], "descriptions": { "ja": "範囲コリジョンの差分指定" } }
       ]
     },
     "EnemyDendenSpawner": {
@@ -4550,18 +4483,14 @@
       "fields": [
         { "name": "Direction", "type": "float32", "default": 90.000000, "min_range": 0.000000, "max_range": 360.000000, "step": 1.000000, "descriptions": { "ja": "移動方向（角度指定）" } },
         { "name": "MoveSpeed", "type": "float32", "default": 10.000000, "min_range": 0.000000, "max_range": 1000.000000, "step": 0.100000, "descriptions": { "ja": "移動速度" } },
-        { "name": "SearchRangeX", "type": "float32", "default": 90.000000, "min_range": 1.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲（X）" } },
-        { "name": "SearchRangeY", "type": "float32", "default": 20.000000, "min_range": 1.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲（Y）" } },
-        { "name": "SearchRangeZ", "type": "float32", "default": 200.000000, "min_range": 1.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲（Z）" } }
+        { "name": "SearchRange", "type": "vector3", "default": [ 90.000000, 20.000000, 200.000000 ], "min_range": [ 1.000000, 1.000000, 1.000000 ], "max_range": [ 100000.000000, 100000.000000, 100000.000000 ], "step": [ 0.100000, 0.100000, 0.100000 ], "descriptions": { "ja": "索敵範囲" } }
       ]
     },
     "EnemyGolaPointSpawner": {
       "fields": [
         { "name": "TargetPosition", "type": "vector3", "alignment": 16, "descriptions": { "ja": "移動先" } },
         { "name": "MoveSpeed", "type": "float32", "default": 10.000000, "min_range": 0.000000, "max_range": 1000.000000, "step": 0.100000, "descriptions": { "ja": "移動速度" } },
-        { "name": "SearchRangeX", "type": "float32", "default": 90.000000, "min_range": 1.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲（X）" } },
-        { "name": "SearchRangeY", "type": "float32", "default": 20.000000, "min_range": 1.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲（Y）" } },
-        { "name": "SearchRangeZ", "type": "float32", "default": 200.000000, "min_range": 1.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲（Z）" } }
+        { "name": "SearchRange", "type": "vector3", "default": [ 90.000000, 20.000000, 200.000000 ], "min_range": [ 1.000000, 1.000000, 1.000000 ], "max_range": [ 100000.000000, 100000.000000, 100000.000000 ], "step": [ 0.100000, 0.100000, 0.100000 ], "descriptions": { "ja": "索敵範囲" } }
       ]
     },
     "EnemyGoldTontonSpawner": {
@@ -4569,10 +4498,7 @@
         { "name": "SerchRange", "type": "float32", "default": 10.000000, "min_range": 0.100000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲(m)" } },
         { "name": "ShotSpeed", "type": "float32", "default": 5.000000, "min_range": 0.100000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "弾の速度(m/s)" } },
         { "name": "ShotInterval", "type": "float32", "default": 10.000000, "min_range": 0.100000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "発射間隔(s)" } },
-        { "name": "CreateType1", "type": "EnemyGoldTontonSpawner::CreateType1", "default": "TYPE_DAMAGE", "descriptions": { "ja": "生成No1" } },
-        { "name": "CreateType2", "type": "EnemyGoldTontonSpawner::CreateType2", "default": "TYPE_DAMAGE", "descriptions": { "ja": "生成No2" } },
-        { "name": "CreateType3", "type": "EnemyGoldTontonSpawner::CreateType3", "default": "TYPE_DAMAGE", "descriptions": { "ja": "生成No3" } },
-        { "name": "CreateType4", "type": "EnemyGoldTontonSpawner::CreateType4", "default": "TYPE_DAMAGE", "descriptions": { "ja": "生成No4" } },
+        { "name": "CreateType", "type": "array", "subtype": "EnemyGoldTontonSpawner::CreateType", "size": 4, "default": "TYPE_DAMAGE", "descriptions": { "ja": "生成" } },
         { "name": "rotY", "type": "float32", "default": 0.000000, "min_range": -360.000000, "max_range": 360.000000, "step": 1.000000, "descriptions": { "ja": "モデルのY軸回転" } }
       ]
     },
@@ -4589,8 +4515,7 @@
     "EnemyGroundAntlionBaseSpawner": {
       "fields": [
         { "name": "PartsNum", "type": "uint32", "default": 0, "min_range": 0, "max_range": 0, "step": 0, "descriptions": { "ja": "体のパーツ数(頭、胴体除く)" } },
-        { "name": "WeakPos1", "type": "int32", "default": 0, "min_range": 0, "max_range": 0, "step": 0, "descriptions": { "ja": "弱点の位置(1)" } },
-        { "name": "WeakPos2", "type": "int32", "default": 0, "min_range": 0, "max_range": 0, "step": 0, "descriptions": { "ja": "弱点の位置(2)" } }
+        { "name": "WeakPos", "type": "array", "subtype": "int32", "size": 2, "default": 0, "min_range": 0, "max_range": 0, "step": 0, "descriptions": { "ja": "弱点の位置" } }
       ]
     },
     "EnemyGroundAntlionSpawner": {
@@ -4714,9 +4639,7 @@
         { "name": "MessageBoot", "type": "bool", "default": false, "descriptions": { "ja": "メッセージで出現か？" } },
         { "name": "appear_range", "type": "float32", "default": 400.000000, "min_range": 0.010000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "出現範囲のサイズ" } },
         { "name": "search_range", "type": "float32", "default": 400.000000, "min_range": 0.010000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲のサイズ" } },
-        { "name": "range_add_x", "type": "float32", "default": 0.000000, "min_range": -1000.000000, "max_range": 1000.000000, "step": 0.100000, "descriptions": { "ja": "範囲コリジョンの差分指定(X)" } },
-        { "name": "range_add_y", "type": "float32", "default": 0.000000, "min_range": -1000.000000, "max_range": 1000.000000, "step": 0.100000, "descriptions": { "ja": "範囲コリジョンの差分指定(Y)" } },
-        { "name": "range_add_z", "type": "float32", "default": 0.000000, "min_range": -1000.000000, "max_range": 1000.000000, "step": 0.100000, "descriptions": { "ja": "範囲コリジョンの差分指定(Z)" } }
+        { "name": "range_add", "type": "vector3", "default": [ 0.000000, 0.000000, 0.000000 ], "min_range": [ -1000.000000, -1000.000000, -1000.000000 ], "max_range": [ 1000.000000, 1000.000000, 1000.000000 ], "step": [ 0.100000, 0.100000, 0.100000 ], "descriptions": { "ja": "範囲コリジョンの差分指定" } }
       ]
     },
     "EnemyLaserGrabberSpawner": {
@@ -5046,18 +4969,14 @@
       "fields": [
         { "name": "is_chaise", "type": "bool", "default": true, "descriptions": { "ja": "攻撃時に移動するかどうか" } },
         { "name": "MoveSpeed", "type": "float32", "default": 60.000000, "min_range": 1.000000, "max_range": 1000.000000, "step": 0.100000, "descriptions": { "ja": "移動速度" } },
-        { "name": "SearchRangeX", "type": "float32", "default": 10.000000, "min_range": 1.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲（X）" } },
-        { "name": "SearchRangeY", "type": "float32", "default": 20.000000, "min_range": 1.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲（Y）" } },
-        { "name": "SearchRangeZ", "type": "float32", "default": 90.000000, "min_range": 1.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲（Z）" } }
+        { "name": "SearchRange", "type": "vector3", "default": [ 10.000000, 20.000000, 90.000000 ], "min_range": [ 1.000000, 1.000000, 1.000000 ], "max_range": [ 100000.000000, 100000.000000, 100000.000000 ], "step": [ 0.100000, 0.100000, 0.100000 ], "descriptions": { "ja": "索敵範囲" } }
       ]
     },
     "EnemyUnidasPointSpawner": {
       "fields": [
         { "name": "TargetPosition", "type": "vector3", "alignment": 16, "descriptions": { "ja": "移動先" } },
         { "name": "MoveSpeed", "type": "float32", "default": 60.000000, "min_range": 1.000000, "max_range": 1000.000000, "step": 0.100000, "descriptions": { "ja": "移動速度" } },
-        { "name": "SearchRangeX", "type": "float32", "default": 10.000000, "min_range": 1.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲（X）" } },
-        { "name": "SearchRangeY", "type": "float32", "default": 20.000000, "min_range": 1.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲（Y）" } },
-        { "name": "SearchRangeZ", "type": "float32", "default": 90.000000, "min_range": 1.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲（Z）" } }
+        { "name": "SearchRange", "type": "vector3", "default": [ 10.000000, 20.000000, 90.000000 ], "min_range": [ 1.000000, 1.000000, 1.000000 ], "max_range": [ 100000.000000, 100000.000000, 100000.000000 ], "step": [ 0.100000, 0.100000, 0.100000 ], "descriptions": { "ja": "索敵範囲" } }
       ]
     },
     "EnemyUnidasSVSpawner": {
@@ -5965,12 +5884,7 @@
     },
     "ObjRollingStoneGeneratorSpawner": {
       "fields": [
-        { "name": "CreateType1", "type": "ObjRollingStoneGeneratorSpawner::CreateType1", "default": "TYPE_HARD", "descriptions": { "ja": "生成No1" } },
-        { "name": "CreateType2", "type": "ObjRollingStoneGeneratorSpawner::CreateType2", "default": "TYPE_HARD", "descriptions": { "ja": "生成No2" } },
-        { "name": "CreateType3", "type": "ObjRollingStoneGeneratorSpawner::CreateType3", "default": "TYPE_HARD", "descriptions": { "ja": "生成No3" } },
-        { "name": "CreateType4", "type": "ObjRollingStoneGeneratorSpawner::CreateType4", "default": "TYPE_HARD", "descriptions": { "ja": "生成No4" } },
-        { "name": "CreateType5", "type": "ObjRollingStoneGeneratorSpawner::CreateType5", "default": "TYPE_HARD", "descriptions": { "ja": "生成No5" } },
-        { "name": "CreateType6", "type": "ObjRollingStoneGeneratorSpawner::CreateType6", "default": "TYPE_HARD", "descriptions": { "ja": "生成No6" } },
+        { "name": "CreateType", "type": "array", "subtype": "ObjRollingStoneGeneratorSpawner::CreateType1", "size": 6, "default": "TYPE_HARD", "descriptions": { "ja": "生成" } },
         { "name": "Speed", "type": "float32", "default": 4.000000, "min_range": 0.100000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "転がる速度(=METER)" } },
         { "name": "IsEventOn", "type": "bool", "default": false, "descriptions": { "ja": "イベント起動か" } },
         { "name": "CreateInterval", "type": "float32", "default": 10.000000, "min_range": 0.100000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "生成間隔" } }
@@ -6317,9 +6231,7 @@
     },
     "ObjBangBackSpawner": {
       "fields": [
-        { "name": "RangeX", "type": "float32", "default": 100.000000, "min_range": 0.000000, "max_range": 10000.000000, "step": 1.000000, "descriptions": { "ja": "範囲X" } },
-        { "name": "RangeY", "type": "float32", "default": 200.000000, "min_range": 0.000000, "max_range": 10000.000000, "step": 1.000000, "descriptions": { "ja": "範囲Y" } },
-        { "name": "RangeZ", "type": "float32", "default": 10.000000, "min_range": 0.000000, "max_range": 10000.000000, "step": 1.000000, "descriptions": { "ja": "範囲Z" } }
+        { "name": "Range", "type": "vector3", "default": [ 100.000000, 100.000000, 100.000000 ], "min_range": [ 0.000000, 0.000000, 0.000000 ], "max_range": [ 10000.000000, 10000.000000, 10000.000000 ], "step": [ 1.000000, 1.000000, 1.000000 ], "descriptions": { "ja": "範囲" } }
       ]
     },
     "ObjBlowFloorSpawner": {
@@ -6441,9 +6353,7 @@
         { "name": "MessageBoot", "type": "bool", "default": false, "descriptions": { "ja": "メッセージで出現か？" } },
         { "name": "serach_range", "type": "float32", "default": 400.000000, "min_range": 0.010000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲のサイズ" } },
         { "name": "disapper_range", "type": "float32", "default": 410.000000, "min_range": 0.010000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "引っ込み範囲のサイズ" } },
-        { "name": "range_add_x", "type": "float32", "default": 0.000000, "min_range": -1000.000000, "max_range": 1000.000000, "step": 0.100000, "descriptions": { "ja": "範囲コリジョンの差分指定(X)" } },
-        { "name": "range_add_y", "type": "float32", "default": 0.000000, "min_range": -1000.000000, "max_range": 1000.000000, "step": 0.100000, "descriptions": { "ja": "範囲コリジョンの差分指定(Y)" } },
-        { "name": "range_add_z", "type": "float32", "default": 0.000000, "min_range": -1000.000000, "max_range": 1000.000000, "step": 0.100000, "descriptions": { "ja": "範囲コリジョンの差分指定(Z)" } }
+        { "name": "range_add", "type": "vector3", "default": [ 0.000000, 0.000000, 0.000000 ], "min_range": [ -1000.000000, -1000.000000, -1000.000000 ], "max_range": [ 1000.000000, 1000.000000, 1000.000000 ], "step": [ 0.100000, 0.100000, 0.100000 ], "descriptions": { "ja": "範囲コリジョンの差分指定" } }
       ]
     },
     "ObjCrowsNestSpawner": {
@@ -6963,9 +6873,7 @@
     "ObjIcicleSpawner": {
       "fields": [
         { "name": "IcicleSize", "type": "ObjIcicleSpawner::IcicleSize", "default": "BIG_SIZE", "descriptions": { "ja": "サイズ" } },
-        { "name": "ColliOffsetX", "type": "float32", "default": 0.000000, "min_range": -10000.000000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "落下コリジョンオフセットX(m)" } },
-        { "name": "ColliOffsetY", "type": "float32", "default": 9.000000, "min_range": -10000.000000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "落下コリジョンオフセットY(m)" } },
-        { "name": "ColliOffsetZ", "type": "float32", "default": 0.000000, "min_range": -10000.000000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "落下コリジョンオフセットZ(m)" } },
+        { "name": "ColliOffsetX", "type": "vector3", "default": [ 0.000000, 9.000000, 0.000000 ], "min_range": [ -10000.000000, -10000.000000, -10000.000000 ], "max_range": [ 10000.000000, 10000.000000, 10000.000000 ], "step": [ 0.100000, 0.100000, 0.100000 ], "descriptions": { "ja": "落下コリジョンオフセット(m)" } },
         { "name": "ColliWidth", "type": "float32", "default": 3.000000, "min_range": 0.100000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "落下コリジョン幅(m)" } },
         { "name": "ColliHeight", "type": "float32", "default": 3.000000, "min_range": 0.100000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "落下コリジョン高(m)" } },
         { "name": "ColliDepth", "type": "float32", "default": 3.000000, "min_range": 0.100000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "落下コリジョン奥(m)" } },
@@ -6988,9 +6896,7 @@
         { "name": "MessageBoot", "type": "bool", "default": false, "descriptions": { "ja": "メッセージで出現させる" } },
         { "name": "SerachRange", "type": "float32", "default": 400.000000, "min_range": 0.010000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲(m)" } },
         { "name": "DisapperRange", "type": "float32", "default": 410.000000, "min_range": 0.010000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "索敵抜け範囲(m)" } },
-        { "name": "RangeAddX", "type": "float32", "default": 0.000000, "min_range": -1000.000000, "max_range": 1000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲オフセットX(m)" } },
-        { "name": "RangeAddY", "type": "float32", "default": 0.000000, "min_range": -1000.000000, "max_range": 1000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲オフセットY(m)" } },
-        { "name": "RangeAddZ", "type": "float32", "default": 0.000000, "min_range": -1000.000000, "max_range": 1000.000000, "step": 0.100000, "descriptions": { "ja": "索敵範囲オフセットZ(m)" } },
+        { "name": "RangeAdd", "type": "vector3", "default": [ 0.000000, 0.000000, 0.000000 ], "min_range": [ -1000.000000, -1000.000000, -1000.000000 ], "max_range": [ 1000.000000, 1000.000000, 1000.000000 ], "step": [ 0.100000, 0.100000, 0.100000 ], "descriptions": { "ja": "索敵範囲オフセット(m)" } },
         { "name": "bulletTime", "type": "float32", "default": 7.000000, "min_range": 0.000000, "max_range": 10000.000000, "step": 0.100000, "descriptions": { "ja": "弾有効時間(sec)" } }
       ]
     },
@@ -7647,9 +7553,7 @@
     },
     "ObjLoopTestSpawner": {
       "fields": [
-        { "name": "scaleX", "type": "float32", "default": 100.000000, "min_range": 0.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "コリジョンサイズ横" } },
-        { "name": "scaleY", "type": "float32", "default": 70.000000, "min_range": 0.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "コリジョンサイズ縦" } },
-        { "name": "scaleZ", "type": "float32", "default": 20.000000, "min_range": 0.000000, "max_range": 100000.000000, "step": 0.100000, "descriptions": { "ja": "コリジョンサイズ奥" } },
+        { "name": "scale", "type": "vector3", "default": [ 100.000000, 70.000000, 20.000000 ], "min_range": [ 0.000000, 0.000000, 0.000000 ], "max_range": [ 100000.000000, 100000.000000, 100000.000000 ], "step": [ 0.100000, 0.100000, 0.100000 ], "descriptions": { "ja": "コリジョンサイズ" } },
         { "name": "pathID", "type": "uint8", "default": 0, "min_range": 64, "max_range": 40, "step": 6, "descriptions": { "ja": "パスID" } }
       ]
     },
